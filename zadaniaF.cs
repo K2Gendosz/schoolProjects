@@ -12,7 +12,7 @@ namespace zadania
 
         static void Main(string[] args)
         {
-            Console.Write("wybierz zadanie 1-4 : ");
+            Console.Write("wybierz zadanie 1-6 : ");
             int x;
             int.TryParse(Console.ReadLine(), out x);
             switch (x)
@@ -29,13 +29,25 @@ namespace zadania
                 case 4:
                     { zadanie4(); }
                     break;
+                case 5:
+                    { zadanie5(); }
+                    break;
+                case 6:
+                    { zadanie6(); }
+                    break;
+                case 7:
+                    { zadanie7(); }
+                    break;
+                case 8:
+                    { zadanie8(); }
+                    break;
                 default:
                     Console.WriteLine("Nie ma takiego działania.");
                     break;
             }
 
             //-------------------------------------------------
-
+            
 
         }
 
@@ -87,10 +99,53 @@ namespace zadania
         }
 
 
+        static void zadanie5()
+        {
+            Console.Write("Podaj ilość liczb w tablicy : ");
+            int[] tablicaWartosci = new int[int.Parse(Console.ReadLine())];
+            for (int i = 0; i < tablicaWartosci.Length; i++)
+            {
+                Console.Write($"Podaj {i+1} liczbę z tablicy : ");
+                tablicaWartosci[i] = int.Parse(Console.ReadLine());
+            }
+            int min = findMin(tablicaWartosci);
+            int max = findMax(tablicaWartosci);
 
+            Console.WriteLine("Min = {0} , Max = {1}",min,max);
+        }
+
+        static void zadanie6()
+        {
+            Console.Write("Podaj ciąg tekstowy : ");
+            string inputString = Console.ReadLine();
+            Console.Write("Podaj znak do sprawdzenia : ");
+            char charToFind = char.Parse(Console.ReadLine());
+            int c = countCharInStr(inputString,charToFind);
+            Console.WriteLine("Znak {0} wystąpił {1} razy w zdaniu {2}",charToFind,c,inputString);
+        }
+
+
+        static void zadanie7()
+        {
+            Console.Write("Podaj ilość liczb w tablicy : ");
+            int[] tablicaWartosci = new int[int.Parse(Console.ReadLine())];
+            for (int i = 0; i < tablicaWartosci.Length; i++)
+            {
+                Console.Write($"Podaj {i + 1} liczbę z tablicy : ");
+                tablicaWartosci[i] = int.Parse(Console.ReadLine());
+            }
+            float avg = arithmeticAvg(tablicaWartosci);
+            Console.WriteLine("średnia == {0}",avg);
+        }
+
+
+        static void zadanie8()
+        {
+
+        }
 
         //---------------------------------------------------
-
+        
 
 
         static string createTextMirror(string inputText)
@@ -112,6 +167,7 @@ namespace zadania
 
             return outputText;
         }
+
 
         static int[] magicNumbers(int[] input)
         {
@@ -152,6 +208,7 @@ namespace zadania
             return result;
         }
 
+
         static int fibonacci(int nElement)
         {
             int[] tab = new int[3];
@@ -168,14 +225,15 @@ namespace zadania
             return tab[2];
         }
 
+
         static bool isPalindrome(string inputText)
         {
 
-            int leng = inputText.Length-1;
-            
+            int leng = inputText.Length - 1;
+
             for (int i = 0; i < inputText.Length/2+inputText.Length%2; i++)
             {
-                
+
                 if (inputText[i] != inputText[leng])//revers[leng])
                 { return false; }
                 leng--;
@@ -185,7 +243,63 @@ namespace zadania
             return true;
         }
 
+
+        static int findMin(int[] tablicaWartosci)
+        {
+            int min=tablicaWartosci[0];
+            for (int i = 0; i < tablicaWartosci.Length-1; i++)
+            {
+                if (min>tablicaWartosci[i])
+                { min = tablicaWartosci[i]; }
+            }
+            return min;
+        }
+        static int findMax(int[] tablicaWartosci)
+        {
+            int max = tablicaWartosci[0];
+            for (int i = 0; i < tablicaWartosci.Length-1; i++)
+            {
+                if (max < tablicaWartosci[i])
+                { max = tablicaWartosci[i]; }
+            }
+            return max;
+        }
+
+
+        static int countCharInStr(string inputString, char charToFind)
+        {
+            int wystapienia = 0;
+            for (int i = 0; i < inputString.Length; i++)
+            {
+                if (inputString[i]==charToFind)
+                {
+                    wystapienia++;
+                }
+            }
+
+            return wystapienia;
+
+        }
+
+        static float arithmeticAvg(int[] tablicaWartosci)
+        {
+            float avg = 0;
+            for (int i = 0; i < tablicaWartosci.Length; i++)
+            {
+                avg += (float)tablicaWartosci[i];
+            }
+            return avg / (float)tablicaWartosci.Length;
+
+        }
     }
-
-
 }
+
+/*Proszę zaimplementować funkcję, która obliczy iloczyn wektorowy dwóch wektorów podanych jako argument ;
+
+int[] vectorMultiply (int[] vecA, int[] vecB)
+
+funkcja powinna sprawdzać czy dane są poprawne (np. długości wektorów).
+
+
+Proszę napisać aplikację demonstrującą działanie funkcji.
+*/
