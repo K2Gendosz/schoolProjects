@@ -173,7 +173,7 @@ namespace zadania
 
             int leng = inputText.Length-1;
             
-            for (int i = 0; i < inputText.Length; i++)
+            for (int i = 0; i < inputText.Length/2+inputText.Length%2; i++)
             {
                 
                 if (inputText[i] != inputText[leng])//revers[leng])
