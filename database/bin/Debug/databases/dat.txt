@@ -1,0 +1,5 @@
+CLIENT - Database File
+3
+1. Kacper Gendosz 12345678901 24
+2. Ktos Inny 10987654321 23
+3. jeszcze inny 12345678911 21
