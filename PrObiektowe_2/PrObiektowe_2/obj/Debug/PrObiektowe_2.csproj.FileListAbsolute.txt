@@ -1,0 +1,6 @@
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\bin\Debug\PrObiektowe_2.exe.config
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\bin\Debug\PrObiektowe_2.exe
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\bin\Debug\PrObiektowe_2.pdb
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\obj\Debug\PrObiektowe_2.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\obj\Debug\PrObiektowe_2.exe
+c:\users\student\documents\visual studio 2015\Projects\PrObiektowe_2\PrObiektowe_2\obj\Debug\PrObiektowe_2.pdb
